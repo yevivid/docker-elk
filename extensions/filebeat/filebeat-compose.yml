@@ -18,6 +18,8 @@ services:
       - --strict.perms=false
     volumes:
       - ./extensions/filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro,Z
+      - /home/yinianvivid/app/elk/docker-elk/extensions/filebeat/log:/home/yinianvivid/app/elk/docker-elk/extensions/filebeat/log
+      - /opt/app/spider/douyu:/opt/app/spider/douyu
       - type: bind
         source: /var/lib/docker/containers
         target: /var/lib/docker/containers
